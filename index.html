@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roue Leonidas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>🎡 Roue Leonidas</h1>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+      <div class="wheel-area">
+        <div class="pointer" aria-hidden="true"></div>
+        <div id="wheel" class="wheel" aria-label="Roue des prix"></div>
+      </div>
 
-<body>
-
-    <h1>🎡 Roue Leonidas</h1>
-
-    <button id="spinButton">
-        Lancer la roue
-    </button>
-
-    <div id="result"></div>
+      <button id="spinButton">Lancer la roue</button>
+      <div id="result">Le prix apparaîtra ici</div>
+    </div>
 
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
