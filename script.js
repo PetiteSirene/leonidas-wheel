@@ -1,20 +1,12 @@
 const prizes = [
-  "5% de réduction",
-  "10% de réduction",
-  "15% de réduction",
-  "20% de réduction",
-  "Un chocolat offert",
-  "Bon d'achat 30€"
+    ["5% de réduction","#ef4444"],
+    ["10% de réduction","#f59e0b"],
+    ["15% de réduction","#10b981"],
+    ["20% de réduction","#3b82f6"],
+    ["Un chocolat offert","#8b5cf6"],
+    ["Bon d'achat 30€","#ec4899"]
 ];
 
-const colors = [
-  "#ef4444",
-  "#f59e0b",
-  "#10b981",
-  "#3b82f6",
-  "#8b5cf6",
-  "#ec4899"
-];
 
 const wheel = document.getElementById("wheel");
 const button = document.getElementById("spinButton");
@@ -25,11 +17,11 @@ let currentRotation = 0;
 let isSpinning = false;
 
 function buildWheel() {
-  const gradient = colors
-    .map((color, index) => {
+  const gradient = prizes
+    .map((prize, index) => {
       const start = index * sectorAngle;
       const end = (index + 1) * sectorAngle;
-      return `${color} ${start}deg ${end}deg`;
+      return `${prize[1]} ${start}deg ${end}deg`;
     })
     .join(", ");
 
@@ -40,7 +32,7 @@ function buildWheel() {
   prizes.forEach((prize, index) => {
     const label = document.createElement("div");
     label.className = "label";
-    label.textContent = prize;
+    label.textContent = prize[0];
 
     const angle = index * sectorAngle + sectorAngle / 2;
     label.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translateY(-145px)`;
