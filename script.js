@@ -1,10 +1,11 @@
 const prizes = [
-    ["5% de réduction","#ef4444"],
+    ["5% de réduction","#44ef86"],
     ["10% de réduction","#f59e0b"],
-    ["15% de réduction","#10b981"],
-    ["20% de réduction","#3b82f6"],
-    ["Un chocolat offert","#8b5cf6"],
-    ["Bon d'achat 30€","#ec4899"]
+    ["5% de réduction","#44ef86"],
+    ["15% de réduction","#ff0b0b"],
+    ["5% de réduction","#44ef86"],
+    ["10% de réduction","#f59e0b"],
+    ["Un chocolat offert","#616162"],
 ];
 
 

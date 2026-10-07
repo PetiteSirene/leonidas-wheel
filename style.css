@@ -27,13 +27,21 @@ h1 {
     margin: 0 auto 24px;
 }
 
+
+.wheel-shell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
 .wheel {
     position: relative;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     border: 12px solid #fff;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     transition: transform 5s cubic-bezier(0.12, 0.74, 0.12, 1);
     overflow: hidden;
 }
