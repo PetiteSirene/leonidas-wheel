@@ -10,7 +10,8 @@ const prizes = [
 
 const wheel = document.getElementById("wheel");
 const button = document.getElementById("spinButton");
-const result = document.getElementById("result");
+const winModal = document.getElementById("winModal");
+const winPrize = document.getElementById("winPrize");
 
 const sectorAngle = 360 / prizes.length;
 let currentRotation = 0;
@@ -41,12 +42,21 @@ function buildWheel() {
   });
 }
 
+function showWinModal(prize) {
+  winPrize.textContent = prize;
+  winModal.classList.add("visible");
+}
+
+function hideWinModal() {
+  winModal.classList.remove("visible");
+}
+
 function spinWheel() {
   if (isSpinning) return;
 
+  hideWinModal();
   isSpinning = true;
   button.disabled = true;
-  result.textContent = "La roue tourne...";
 
   const winningIndex = Math.floor(Math.random() * prizes.length);
   const selectedCenterAngle = winningIndex * sectorAngle + sectorAngle / 2;
@@ -59,13 +69,14 @@ function spinWheel() {
   wheel.style.transform = `rotate(${currentRotation}deg)`;
 
   window.setTimeout(() => {
-    const winningPrize = prizes[winningIndex];
-    result.textContent = `Gagné : ${winningPrize}`;
+    const winningPrize = prizes[winningIndex][0];
+    showWinModal(winningPrize);
     isSpinning = false;
     button.disabled = false;
   }, 5000);
 }
 
 button.addEventListener("click", spinWheel);
+winModal.addEventListener("click", hideWinModal);
 
 buildWheel();
