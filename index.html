@@ -8,16 +8,23 @@
   </head>
   <body>
     <div class="app">
-      <h1>🎡 Roue Leonidas</h1>
-
-      <div class="wheel-area">
-        <div class="pointer" aria-hidden="true"></div>
-        <div class="wheel-shell">
-          <div id="wheel" class="wheel" aria-label="Roue des prix"></div>
+        <div class="leftside">
+          <h1>Bienvenue chez Leonidas</h1>
+          <p class="text">Communiquez votre courriel pour tenter votre chance et gagner un bon d'achat !<br> <br> <br>
+            Give your email to try your luck and win a gift card!
+          </p>
         </div>
-      </div>
+        
+        <div class="rightside">
+            <button id="spinButton">
+                    <div class="pointer" aria-hidden="true"></div>
+                    <div class="wheel-shell">
+                        <div id="wheel" class="wheel" aria-label="Roue des prix"></div>
+                    </div>
+                
+            </button>
+        </div>
 
-      <button id="spinButton">Lancer la roue</button>
     </div>
 
     <div id="winModal" class="modal" aria-hidden="true">

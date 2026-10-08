@@ -37,7 +37,8 @@ function buildWheel() {
     label.textContent = prize[0];
 
     const angle = index * sectorAngle + sectorAngle / 2;
-    label.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translateY(-145px)`;
+    const topOffset = wheel.clientWidth * 0.15;
+    label.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translateY(-145px) translateY(-${topOffset}px)`;
 
     wheel.appendChild(label);
   });
