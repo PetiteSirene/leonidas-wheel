@@ -160,20 +160,3 @@ button {
     color: #EDEEEE;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
-
-
-@media (max-width: 480px) {
-    .wheel-area {
-        width: 300px;
-        height: 300px;
-    }
-
-    .label {
-        width: 82px;
-        font-size: 12px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-}

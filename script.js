@@ -19,7 +19,6 @@ let currentRotation = 0;
 let isSpinning = false;
 
 function buildWheel() {
-  showWinModal("5% de réduction"); // Hide the modal when building the wheel
   const gradient = prizes
     .map((prize, index) => {
       const start = index * sectorAngle;
