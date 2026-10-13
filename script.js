@@ -1,24 +1,30 @@
+//Liste des prix à gagner
+//[titre \n sous titre, couleur, taille du titre, taille du sous-titre]
 const prizes = [
-    ["5% de réduction","#0F2458"],
-    ["10% de réduction","#E6C033"],
-    ["5% de réduction","#0F2458"],
-    ["15% de réduction","#ff0b0b"],
-    ["5% de réduction","#0F2458"],
-    ["10% de réduction","#E6C033"],
-    ["Un chocolat offert","#616162"],
+    ["5%\nde réduction", "#0F2458", "3rem", "1.2rem"],
+    ["10%\nde réduction", "#E6C033", "3rem", "1.2rem"],
+    ["5%\nde réduction", "#0F2458", "3rem", "1.2rem"],
+    ["15%\nde réduction", "#ff0b0b", "3rem", "1.2rem"],
+    ["5%\nde réduction", "#0F2458", "3rem", "1.2rem"],
+    ["10%\nde réduction", "#E6C033", "3rem", "1.2rem"],
+    ["Un chocolat offert", "#616162", "2rem", ""],
 ];
 
-
+//Récupérer les éléments qui nous interesse dans l'html
 const wheel = document.getElementById("wheel");
 const button = document.getElementById("spinButton");
 const winModal = document.getElementById("winModal");
 const winPrize = document.getElementById("winPrize");
 
-const sectorAngle = 360 / prizes.length;
-let currentRotation = 0;
-let isSpinning = false;
+
 
 function buildWheel() {
+  //Calculer l'angle d'un quartier de roue en fonction du nombre de prix
+  const sectorAngle = 360 / prizes.length;
+  let currentRotation = 0;
+  let isSpinning = false; 
+
+  //Colorier la roue en quartier
   const gradient = prizes
     .map((prize, index) => {
       const start = index * sectorAngle;
@@ -26,20 +32,44 @@ function buildWheel() {
       return `${prize[1]} ${start}deg ${end}deg`;
     })
     .join(", ");
-
   wheel.style.background = `conic-gradient(${gradient})`;
-
   wheel.innerHTML = "";
 
+  //Pour chaque prix
   prizes.forEach((prize, index) => {
+    
+    //créer un label composé d'un titre et d'un sous-titre
     const label = document.createElement("div");
     label.className = "label";
-    label.textContent = prize[0];
+    label.style.display = "flex";
+    label.style.flexDirection = "column";
+    label.style.alignItems = "center";
+    label.style.justifyContent = "center";
+    label.style.gap = "2px";
 
+    const [firstLine, secondLine = ""] = prize[0].split("\n");
+
+    //Titre du label
+    const topLine = document.createElement("span");
+    topLine.textContent = firstLine;
+    topLine.style.fontSize = prize[2];
+    topLine.style.lineHeight = "1.1";
+
+    //Sous-titre du label
+    const bottomLine = document.createElement("span");
+    bottomLine.textContent = secondLine;
+    bottomLine.style.fontSize = prize[3];
+    bottomLine.style.lineHeight = "1.1";
+
+    label.appendChild(topLine);
+    label.appendChild(bottomLine);
+
+    //positionner le label correctement sur chaque quartier de roue
     const angle = index * sectorAngle + sectorAngle / 2;
     const topOffset = wheel.clientWidth * 0.15;
     label.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translateY(-145px) translateY(-${topOffset}px)`;
 
+    //appliquer
     wheel.appendChild(label);
   });
 }
