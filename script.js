@@ -7,7 +7,7 @@ const prizes = [
     ["10%\nde réduction", "#E6C033", "3rem", "1.2rem"],
     ["5%\nde réduction", "#0F2458", "3rem", "1.2rem"],
     ["10%\nde réduction", "#E6C033", "3rem", "1.2rem"],
-    ["1 choco offert", "#616162", "2rem", ""],
+    ["Un chocolat offert", "#616162", "2rem", ""],
 ];
 
 //Récupérer les éléments qui nous interesse dans l'html
@@ -48,6 +48,11 @@ function buildWheel() {
     label.style.gap = "2px";
 
     const [firstLine, secondLine = ""] = prize[0].split("\n");
+    const normalizedFirstLine = firstLine.trim().toLowerCase();
+
+    if (normalizedFirstLine === "un chocolat offert" || normalizedFirstLine === "un choco offert") {
+      label.classList.add("special-prize-label");
+    }
 
     //Titre du label
     const topLine = document.createElement("span");
