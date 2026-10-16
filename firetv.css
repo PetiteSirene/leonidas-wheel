@@ -64,7 +64,7 @@ body.firetv .label span:first-child {
 
 /* cas speciale pour le label "Un choco offert" */
 body.firetv .label.special-prize-label span:first-child { 
-  font-size: clamp(1.5rem, 1.4vw, 2.2rem) !important;
+  font-size: clamp(2rem, 1.4vw, 2.2rem) !important;
   line-height: 1.1 !important;
 }
 
