@@ -57,6 +57,16 @@ button {
     transform-origin: center center;
 }
 
+body.firetv .label span:first-child {
+  font-size: clamp(1.6rem, 2.1vw, 3.2rem) !important;
+  line-height: 1.1 !important;
+}
+
+body.firetv .label span:last-child {
+  font-size: clamp(0.9rem, 1.2vw, 1.8rem) !important;
+  line-height: 1.1 !important;
+}
+
 .modal-content {
   width: min(42vw, 650px);
   height: auto;
