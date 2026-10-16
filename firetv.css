@@ -58,7 +58,7 @@ button {
 }
 
 body.firetv .label span:first-child {
-  font-size: clamp(2rem, 2.1vw, 3.2rem) !important;
+  font-size: clamp(2.5rem, 2.1vw, 3.2rem) !important;
   line-height: 1.1 !important;
 }
 
