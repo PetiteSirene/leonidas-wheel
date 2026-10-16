@@ -39,8 +39,8 @@ h1 {
 }
 
 button {
-  width: min(80vmin, 980px);
-  height: min(80vmin, 980px);
+  width: 90vmin;
+  height: 90vmin;;
 }
 
 .label {
