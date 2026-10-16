@@ -34,6 +34,7 @@ h1 {
 
 .text {
   font-size: clamp(1.2rem, 1.7vw, 2.4rem);
+  color: #09a426;
   line-height: 1.4;
   margin: 0 2rem;
 }
