@@ -1,0 +1,59 @@
+html, body {
+  overflow: hidden;
+}
+
+body {
+  background-position: center center;
+  background-size: cover;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 32% 68%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.leftside {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.rightside {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 3vw, 4.8rem);
+  margin: 10vh 2rem 6vh;
+}
+
+.text {
+  font-size: clamp(1.2rem, 1.7vw, 2.4rem);
+  line-height: 1.4;
+  margin: 0 2rem;
+}
+
+button {
+  width: min(70vmin, 860px);
+  height: min(70vmin, 860px);
+}
+
+.modal-content {
+  width: min(42vw, 650px);
+  height: auto;
+  min-height: 220px;
+}
+
+.modal-content h2 {
+  margin: 40px 0 20px;
+  font-size: clamp(1.8rem, 2vw, 3rem);
+}
+
+.modal-content p {
+  font-size: clamp(2rem, 3vw, 4.8rem);
+}

@@ -34,6 +34,21 @@
       </div>
     </div>
 
+    <script>
+      const ua = navigator.userAgent.toLowerCase();
+      const isFireTV =
+        ua.includes("silk") ||
+        ua.includes("fire tv") ||
+        ua.includes("aftm") ||
+        (window.screen.width >= 1280 && window.screen.height >= 720 && ua.includes("android"));
+
+      if (isFireTV) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "firetv.css";
+        document.head.appendChild(link);
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
