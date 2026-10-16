@@ -2,9 +2,9 @@
 //[titre \n sous titre, couleur, taille du titre, taille du sous-titre]
 const prizes = [
     ["5%\nde réduction", "#0F2458", "3rem", "1.2rem"],
-    ["10%\nde réduction", "#E6C033", "3rem", "1.2rem"],
-    ["5%\nde réduction", "#0F2458", "3rem", "1.2rem"],
     ["15%\nde réduction", "#ff0b0b", "3rem", "1.2rem"],
+    ["5%\nde réduction", "#0F2458", "3rem", "1.2rem"],
+    ["10%\nde réduction", "#E6C033", "3rem", "1.2rem"],
     ["5%\nde réduction", "#0F2458", "3rem", "1.2rem"],
     ["10%\nde réduction", "#E6C033", "3rem", "1.2rem"],
     ["Un chocolat offert", "#616162", "2rem", ""],
@@ -16,13 +16,13 @@ const button = document.getElementById("spinButton");
 const winModal = document.getElementById("winModal");
 const winPrize = document.getElementById("winPrize");
 
-
+let sectorAngle = 0;
+let currentRotation = 0;
+let isSpinning = false;
 
 function buildWheel() {
   //Calculer l'angle d'un quartier de roue en fonction du nombre de prix
-  const sectorAngle = 360 / prizes.length;
-  let currentRotation = 0;
-  let isSpinning = false; 
+  sectorAngle = 360 / prizes.length;
 
   //Colorier la roue en quartier
   const gradient = prizes
