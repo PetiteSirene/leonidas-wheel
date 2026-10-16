@@ -7,7 +7,7 @@ const prizes = [
     ["10%\nde réduction", "#E6C033", "3rem", "1.2rem"],
     ["5%\nde réduction", "#0F2458", "3rem", "1.2rem"],
     ["10%\nde réduction", "#E6C033", "3rem", "1.2rem"],
-    ["Un chocolat offert", "#616162", "2rem", ""],
+    ["1 choco offert", "#616162", "2rem", ""],
 ];
 
 //Récupérer les éléments qui nous interesse dans l'html
