@@ -2,11 +2,11 @@
 //[titre \n sous titre, couleur, taille du titre, taille du sous-titre]
 const prizes = [
     ["5%\nde réduction", "#0F2458", "3rem", "1.2rem"],
-    ["15%\nde réduction", "#ff0b0b", "3rem", "1.2rem"],
+    ["15%\nde réduction", "#c50a0a", "3rem", "1.2rem"],
     ["5%\nde réduction", "#0F2458", "3rem", "1.2rem"],
-    ["10%\nde réduction", "#E6C033", "3rem", "1.2rem"],
+    ["10%\nde réduction", "#c4a32c", "3rem", "1.2rem"],
     ["5%\nde réduction", "#0F2458", "3rem", "1.2rem"],
-    ["10%\nde réduction", "#E6C033", "3rem", "1.2rem"],
+    ["10%\nde réduction", "#c4a32c", "3rem", "1.2rem"],
     ["Un chocolat offert", "#616162", "2rem", ""],
 ];
 
